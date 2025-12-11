@@ -9,3 +9,65 @@ Learn more: https://nextjs.org/docs/app/building-your-application/upgrading/code
 npx @next/codemod@latest new-link .
 
 Learn more: https://nextjs.org/docs/app/building-your-application/upgrading/codemods#remove-a-tags-from-link-components
+[00:03:47.728] Server  LOG      ✓ Compiled in 6ms
+[00:03:47.992] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <CssBaseline>
+    <AppBar position="static" color="default" sx={{...}}>
+      <MuiAppBar-root square={true} component="header" ownerState={{position:"...", ...}} elevation={4} ...>
+        <Insertion>
+        <Paper square={true} component="header" elevation={4} className="MuiAppBar-...">
+          <MuiPaper-root as="header" ownerState={{square:true, ...}} className="MuiPaper-r..." ref={null} style={{...}}>
+            <Insertion>
+            <header className="MuiPaper-r..." style={{...}}>
+              <Toolbar sx={{display:"flex", ...}}>
+                <MuiToolbar-root as="div" className="MuiToolbar..." ref={null} ownerState={{sx:{...}, ...}} ...>
+                  <Insertion>
+                  <div className="MuiToolbar...">
+                    <Typography>
+                    <Box>
+                      <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} sx={{}}>
+                        <Insertion>
+                        <div className="MuiBox-roo...">
+                          <LinkComponent href="/">
+>                           <a
+>                             ref={function}
+>                             onClick={function onClick}
+>                             onMouseEnter={function onMouseEnter}
+>                             onTouchStart={function onTouchStart}
+>                             href="/"
+>                           >
+                              <Button component="a" sx={{marginRight:2}}>
+                                <MuiButton-root ownerState={{component:"a", ...}} className="MuiButton-..." component="a" ...>
+                                  <Insertion>
+                                  <ButtonBase className="MuiButton-..." component="a" disabled={null} focusRipple={true} ...>
+                                    <MuiButtonBase-root as="a" className="MuiButtonB..." ownerState={{...}} ...>
+                                      <Insertion>
+>                                     <a
+>                                       className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrim..."
+>                                       onBlur={function useEventCallback.useRef}
+>                                       onClick={undefined}
+>                                       onContextMenu={function useEventCallback.useRef}
+>                                       onFocus={function useEventCallback.useRef}
+>                                       onKeyDown={function useEventCallback.useRef}
+>                                       onKeyUp={function useEventCallback.useRef}
+>                                       onMouseDown={function useEventCallback.useRef}
+>                                       onMouseLeave={function useEventCallback.useRef}
+>                                       onMouseUp={function useEventCallback.useRef}
+>                                       onDragLeave={function useEventCallback.useRef}
+>                                       onTouchEnd={function useEventCallback.useRef}
+>                                       onTouchMove={function useEventCallback.useRef}
+>                                       onTouchStart={function useEventCallback.useRef}
+>                                       tabIndex={0}
+>                                       type={undefined}
+>                                       role="button"
+>                                       id={undefined}
+>                                       ref={function useForkRef.useMemo}
+>                                     >
+                          ...
+    ...
+
+[00:03:47.992] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a>

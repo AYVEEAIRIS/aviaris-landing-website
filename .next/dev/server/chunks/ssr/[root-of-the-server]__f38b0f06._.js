@@ -50,7 +50,7 @@ function RootLayout({ children }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("head", {}, void 0, false, {
                 fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                 lineNumber: 34,
-                columnNumber: 1
+                columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$styles$2f$ThemeProvider$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ThemeProvider$3e$__["ThemeProvider"], {
@@ -59,7 +59,7 @@ function RootLayout({ children }) {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$CssBaseline$2f$CssBaseline$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CssBaseline$3e$__["CssBaseline"], {}, void 0, false, {
                             fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                             lineNumber: 37,
-                            columnNumber: 1
+                            columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$AppBar$2f$AppBar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AppBar$3e$__["AppBar"], {
                             position: "static",
@@ -83,14 +83,12 @@ function RootLayout({ children }) {
                                     }, void 0, false, {
                                         fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                                         lineNumber: 44,
-                                        columnNumber: 1
+                                        columnNumber: 5
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/",
-                                                passHref: true,
-                                                legacyBehavior: true,
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                                                     component: "a",
                                                     sx: {
@@ -99,71 +97,69 @@ function RootLayout({ children }) {
                                                     children: "Home"
                                                 }, void 0, false, {
                                                     fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
-                                                    lineNumber: 51,
-                                                    columnNumber: 1
+                                                    lineNumber: 53,
+                                                    columnNumber: 7
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                                                 lineNumber: 50,
-                                                columnNumber: 1
+                                                columnNumber: 5
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/mission",
-                                                passHref: true,
-                                                legacyBehavior: true,
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                                                     component: "a",
                                                     children: "Mission & Values"
                                                 }, void 0, false, {
                                                     fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
-                                                    lineNumber: 58,
-                                                    columnNumber: 1
+                                                    lineNumber: 62,
+                                                    columnNumber: 7
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
-                                                lineNumber: 57,
-                                                columnNumber: 1
+                                                lineNumber: 59,
+                                                columnNumber: 5
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                                         lineNumber: 49,
-                                        columnNumber: 1
+                                        columnNumber: 5
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                                 lineNumber: 43,
-                                columnNumber: 1
+                                columnNumber: 5
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                             lineNumber: 38,
-                            columnNumber: 1
+                            columnNumber: 5
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projects$2f$aviaris$2d$landing$2d$website$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                             children: children
                         }, void 0, false, {
                             fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
-                            lineNumber: 65,
-                            columnNumber: 1
+                            lineNumber: 69,
+                            columnNumber: 5
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                     lineNumber: 36,
-                    columnNumber: 1
+                    columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
                 lineNumber: 35,
-                columnNumber: 1
+                columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/projects/aviaris-landing-website/src/app/layout.tsx",
         lineNumber: 33,
-        columnNumber: 1
+        columnNumber: 3
     }, this);
 }
 }),
