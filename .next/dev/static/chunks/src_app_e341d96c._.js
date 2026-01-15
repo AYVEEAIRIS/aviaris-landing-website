@@ -218,7 +218,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/app/layout.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/* -------------------------------------------------------------------------- */ /* ------------------------------- app/layout.jsx --------------------------- */ /* -------------------------------------------------------------------------- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "default",
     ()=>RootLayout
 ]);
@@ -233,7 +233,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$styles$2f$ThemeProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ThemeProvider$3e$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/styles/ThemeProvider.js [app-client] (ecmascript) <export default as ThemeProvider>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$styles$2f$createTheme$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__createTheme$3e$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/styles/createTheme.js [app-client] (ecmascript) <export default as createTheme>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/components/layout/Footer.tsx [app-client] (ecmascript)");
-"use client";
+/* -------------------------------------------------------------------------- */ /* ------------------------------- app/layout.jsx --------------------------- */ /* -------------------------------------------------------------------------- */ "use client";
 ;
 ;
 ;

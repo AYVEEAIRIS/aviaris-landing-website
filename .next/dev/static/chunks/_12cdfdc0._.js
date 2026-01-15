@@ -2,7 +2,7 @@
 "[project]/src/app/page.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/* -------------------------------------------------------------------------- */ /* -------------------------------- app/page.jsx ---------------------------- */ /* -------------------------------------------------------------------------- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "default",
     ()=>HomePage
 ]);
@@ -12,7 +12,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/Box/Box.js [app-client] (ecmascript) <export default as Box>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/Button/Button.js [app-client] (ecmascript) <export default as Button>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Paper$2f$Paper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Paper$3e$__ = __turbopack_context__.i("[project]/node_modules/@mui/material/esm/Paper/Paper.js [app-client] (ecmascript) <export default as Paper>");
-"use client";
+/* -------------------------------------------------------------------------- */ /* -------------------------------- app/page.jsx ---------------------------- */ /* -------------------------------------------------------------------------- */ "use client";
 ;
 ;
 function HomePage() {
