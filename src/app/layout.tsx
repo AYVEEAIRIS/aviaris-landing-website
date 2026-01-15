@@ -14,10 +14,10 @@ import Footer from "./components/layout/Footer";
 const theme = createTheme({
 palette: {
 primary: {
-main: '#1976d2',
+main: '#2f3f20',
 },
 secondary: {
-main: '#f50057',
+main: '#e6eebe',
 },
 background: {
 default: '#ffffff',
@@ -38,7 +38,7 @@ return (
     <CssBaseline />
     <AppBar
     position="static"
-    color="default"
+    color="primary"
     sx={{ boxShadow: "none", borderBottom: "1px solid #e0e0e0" }}
     >
     <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -48,10 +48,10 @@ return (
 
 
     <Box>
-    <Button component={Link} href="/" sx={{ marginRight: 2 }}>
+    <Button component={Link} href="/" sx={{ marginRight: 2, color: "white" }}>
       Home
     </Button>
-    <Button component={Link} href="/mission">
+    <Button component={Link} href="/mission" sx={{ marginRight: 2,color: "white" }}>
       About Us
     </Button>
     </Box>

@@ -242,10 +242,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$
 const theme = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$styles$2f$createTheme$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__createTheme$3e$__["createTheme"])({
     palette: {
         primary: {
-            main: '#1976d2'
+            main: '#2f3f20'
         },
         secondary: {
-            main: '#f50057'
+            main: '#e6eebe'
         },
         background: {
             default: '#ffffff'
@@ -275,7 +275,7 @@ function RootLayout({ children }) {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$AppBar$2f$AppBar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AppBar$3e$__["AppBar"], {
                             position: "static",
-                            color: "default",
+                            color: "primary",
                             sx: {
                                 boxShadow: "none",
                                 borderBottom: "1px solid #e0e0e0"
@@ -303,7 +303,8 @@ function RootLayout({ children }) {
                                                 component: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"],
                                                 href: "/",
                                                 sx: {
-                                                    marginRight: 2
+                                                    marginRight: 2,
+                                                    color: "white"
                                                 },
                                                 children: "Home"
                                             }, void 0, false, {
@@ -314,6 +315,10 @@ function RootLayout({ children }) {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                                                 component: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"],
                                                 href: "/mission",
+                                                sx: {
+                                                    marginRight: 2,
+                                                    color: "white"
+                                                },
                                                 children: "About Us"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/layout.tsx",

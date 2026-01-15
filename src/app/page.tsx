@@ -12,7 +12,7 @@ export default function HomePage() {
 return (
 <Container sx={{ textAlign: "center", paddingTop: "4rem" }}>
 <Typography variant="h2" fontWeight={700} gutterBottom>
-Aviaris
+Horizon
 </Typography>
 
 
