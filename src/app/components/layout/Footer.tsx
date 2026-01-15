@@ -50,7 +50,7 @@ const Footer: FC = () => {
               color="text.secondary"
               sx={{ "&:hover": { color: "text.primary" } }}
             >
-              Mission & Values
+              About
             </Typography>
           </Link>
 
@@ -60,7 +60,7 @@ const Footer: FC = () => {
               color="text.secondary"
               sx={{ "&:hover": { color: "text.primary" } }}
             >
-              Contact Us
+              Contact
             </Typography>
           </Link>
         </Stack>
