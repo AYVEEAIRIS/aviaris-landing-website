@@ -8,6 +8,7 @@ import React from "react";
 import Link from "next/link";
 import { AppBar, Toolbar, Typography, Button, Box, CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Footer from "./components/layout/Footer";
 
 
 const theme = createTheme({
@@ -47,26 +48,18 @@ return (
 
 
     <Box>
-    <Link href="/">
-      {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
-      }
-      <Button component="a" sx={{ marginRight: 2 }}>
+    <Button component={Link} href="/" sx={{ marginRight: 2 }}>
       Home
-      </Button>
-    </Link>
-
-
-    <Link href="/mission">
-      {/* @next-codemod-error This Link previously used the now removed `legacyBehavior` prop, and has a child that might not be an anchor. The codemod bailed out of lifting the child props to the Link. Check that the child component does not render an anchor, and potentially move the props manually to Link. */
-      }
-      <Button component="a">Mission & Values</Button>
-    </Link>
+    </Button>
+    <Button component={Link} href="/mission">
+      About Us
+    </Button>
     </Box>
     </Toolbar>
     </AppBar>
 
-
     <main>{children}</main>
+    <Footer />
     </ThemeProvider>
     </body>
   </html>
