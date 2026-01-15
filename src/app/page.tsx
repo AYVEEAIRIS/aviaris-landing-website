@@ -55,20 +55,20 @@ Visualize tasks on a horizontal timeline with stackable rows.
 
 <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
 <Typography variant="h6" fontWeight={700} gutterBottom>
-Real-Time Collaboration
+Forecasting Model
 </Typography>
 <Typography variant="body2" color="text.secondary">
-Manage scheduling changes instantly across your team.
+Create scheduling forecasts in the future with predictive algorithms.
 </Typography>
 </Paper>
 
 
 <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
 <Typography variant="h6" fontWeight={700} gutterBottom>
-SaaS-Ready Architecture
+Communication Hub
 </Typography>
 <Typography variant="body2" color="text.secondary">
-Built for scalability, multi-tenancy, and enterprise growth.
+Centralize team communication from top to bottom.
 </Typography>
 </Paper>
 </Box>
