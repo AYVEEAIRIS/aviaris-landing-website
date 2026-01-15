@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Box, Typography, Stack, Divider } from "@mui/material";
 import { FC } from "react";
 
@@ -26,9 +27,12 @@ const Footer: FC = () => {
       >
         {/* Left Section - Brand */}
         <Box>
-          <Typography variant="h6" fontWeight={600}>
-            Aviaris
-          </Typography>
+          <Image
+            src="/Horizontal Lockups-Black.svg"
+            alt="Aviaris Horizontal Logo"
+            width={200}
+            height={30}
+          />
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
             Intelligent Scheduling • Precision Productivity
           </Typography>

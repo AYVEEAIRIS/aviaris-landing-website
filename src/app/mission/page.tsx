@@ -12,14 +12,12 @@ export function MissionPageContent() {
 return (
 <Container sx={{ paddingTop: "4rem" }}>
 <Typography variant="h3" fontWeight={700} gutterBottom>
-Our Mission & Values
+At Aviaris, our mission is to empower operational teams to turn strategy into action through a unified platform.
 </Typography>
 
 
 <Typography variant="body1" sx={{ marginTop: "1rem", maxWidth: "700px" }}>
-At Aviaris, our mission is to empower organizations with intuitive, high-performance scheduling tools
-that streamline operations and unlock new efficiencies. We believe that technology should stay out of
-your way while elevating your team's abilities.
+We believe that to develop solutions for real world, critical business problems that affect day-to-day operations, we must first solve communication gaps and disparate data sources. We aim to improve the lack of transparency and visibility to reduce human error.
 </Typography>
 
 

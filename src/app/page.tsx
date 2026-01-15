@@ -6,6 +6,7 @@
 
 import React from "react";
 import { Container, Typography, Box, Button, Paper } from "@mui/material";
+import { theme } from "@/config/theme";
 
 
 export default function HomePage() {
@@ -26,14 +27,6 @@ Powerful scheduling, resource management, and timeline visualization to help you
 smarter. Built with reliability, scalability, and simplicity in mind.
 </Typography>
 
-
-<Box sx={{ mt: 6, display: "flex", justifyContent: "center" }}>
-<Button variant="contained" size="large">
-Join the Waitlist
-</Button>
-</Box>
-
-
 <Box sx={{ mt: 8 }}>
 <Paper elevation={3} sx={{ height: 300, display: "flex", alignItems: "center", justifyContent: "center" }}>
 <Typography variant="body1" color="text.secondary">
@@ -43,7 +36,7 @@ Placeholder for Product Screenshot
 </Box>
 
 
-<Box sx={{ mt: 12, py: 8, backgroundColor: "#f7f7f7" }}>
+<Box sx={{ mt: 12, py: 8, backgroundColor: theme.palette.secondary.main }}>
 <Typography variant="h4" fontWeight={700} align="center" gutterBottom>
 Key Features
 </Typography>
@@ -84,7 +77,7 @@ Built for scalability, multi-tenancy, and enterprise growth.
 
 <Container sx={{ my: 10 }}>
 <Typography variant="h4" fontWeight={700} align="center" gutterBottom>
-Join the Aviaris Waitlist
+Join Aviaris's Horizon Waitlist
 </Typography>
 <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 3 }}>
 Be the first to try our scheduling platform.
