@@ -52,7 +52,10 @@ return (
       Home
     </Button>
     <Button component={Link} href="/mission" sx={{ marginRight: 2,color: "white" }}>
-      About Us
+      About 
+    </Button>
+    <Button component={Link} href="/contact" sx={{ marginRight: 2,color: "white" }}>
+      Contact
     </Button>
     </Box>
     </Toolbar>
