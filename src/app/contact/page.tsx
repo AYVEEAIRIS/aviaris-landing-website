@@ -67,7 +67,7 @@ export default function ContactPage() {
 
   return (
     <Container
-      sx={{ textAlign: 'center', paddingTop: '2rem', paddingBottom: '2rem' }}
+      sx={{ textAlign: 'center', paddingTop: '2rem', paddingBottom: '1rem' }}
     >
       <Typography
         variant="h3"
