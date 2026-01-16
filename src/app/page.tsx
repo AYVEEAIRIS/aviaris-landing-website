@@ -5,6 +5,7 @@
 
 
 import React from "react";
+import Link from "next/link";
 import { Container, Typography, Box, Button, Paper } from "@mui/material";
 import { theme } from "@/config/theme";
 
@@ -18,13 +19,12 @@ Horizon
 
 
 <Typography variant="h5" color="text.secondary" gutterBottom>
-Scheduling Intelligence for Modern Operations
+Aviation-based Software for Supporting Operational Teams
 </Typography>
 
 
 <Typography variant="body1" sx={{ maxWidth: "600px", margin: "0 auto", marginTop: "1rem" }}>
-Powerful scheduling, resource management, and timeline visualization to help your business operate
-smarter. Built with reliability, scalability, and simplicity in mind.
+Centralized scheduling and communication platform for Heavy Maintenance built by individuals with 40+ years of aviation experience.
 </Typography>
 
 <Box sx={{ mt: 8 }}>
@@ -83,7 +83,7 @@ Join Aviaris's Horizon Waitlist
 Be the first to try our scheduling platform.
 </Typography>
 <Box display="flex" justifyContent="center">
-<Button variant="contained" size="large">Sign Up</Button>
+<Button component={Link} href="/contact"variant="contained" size="large">Sign Up</Button>
 </Box>
 </Container>
 </Container>
