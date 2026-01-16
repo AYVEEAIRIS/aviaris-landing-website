@@ -1,97 +1,51 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
-import { Box, Typography, Stack, Divider } from "@mui/material";
-import { FC } from "react";
+import Link from 'next/link';
+import Image from 'next/image';
+import { Box, Typography, Stack, Divider, Grid } from '@mui/material';
+import { FC } from 'react';
+import { theme } from '@/config/theme';
 
 const Footer: FC = () => {
   return (
-    <Box
-      component="footer"
+    <Grid
+      container
+      spacing={2}
       sx={{
-        mt: 8,
-        py: 4,
+        mt: 4,
+        py: 2,
         px: 2,
-        bgcolor: "grey.100",
-        borderTop: "1px solid #e0e0e0",
+        bgcolor: theme.palette.secondary.main,
+        borderTop: `5px solid ${theme.palette.primary.main}`,
         bottom: 0,
-        width: "100%",
+        width: '100%',
       }}
     >
-      <Stack
-        direction={{ xs: "column", sm: "row" }}
-        spacing={4}
-        justifyContent="space-between"
-        alignItems={{ xs: "flex-start", sm: "center" }}
-      >
+      <Grid size={6}>
         {/* Left Section - Brand */}
-        <Box>
-          <Image
-            src="/Horizontal Lockups-Black.svg"
-            alt="Aviaris Horizontal Logo"
-            width={200}
-            height={30}
-          />
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            Intelligent Scheduling • Precision Productivity
-          </Typography>
-        </Box>
-
-        {/* Center Links */}
-        <Stack spacing={1}>
-          <Link href="/" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ "&:hover": { color: "text.primary" } }}
-            >
-              Home
-            </Typography>
-          </Link>
-
-          <Link href="/mission" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ "&:hover": { color: "text.primary" } }}
-            >
-              About
-            </Typography>
-          </Link>
-
-          <Link href="/contact" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ "&:hover": { color: "text.primary" } }}
-            >
-              Contact
-            </Typography>
-          </Link>
-        </Stack>
-
+        <Image
+          src="/Horizontal Lockups-Black.svg"
+          alt="Aviaris Horizontal Logo"
+          width={200}
+          height={30}
+        />
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+          Intelligent Scheduling • Collaborative Communication
+        </Typography>
+      </Grid>
+      <Grid size={6}>
         {/* Right Section - Legal */}
-        <Box>
-          <Typography variant="body2" color="text.secondary">
-            © {new Date().getFullYear()} Aviaris.
-            <br />
-            All rights reserved.
-          </Typography>
-        </Box>
-      </Stack>
-
-      <Divider sx={{ my: 3 }} />
-
-      <Typography
-        variant="caption"
-        color="text.secondary"
-        display="block"
-        textAlign="center"
-      >
-        Built with Next.js & Material UI
-      </Typography>
-    </Box>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ position: 'relative', textAlign: 'right', bottom: 0 }}
+        >
+          © {new Date().getFullYear()} Aviaris, Inc.
+          <br />
+          All rights reserved.
+        </Typography>
+      </Grid>
+    </Grid>
   );
 };
 
