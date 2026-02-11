@@ -89,30 +89,6 @@ export default function HomePage() {
             </Paper>
           </Box>
         </Box>
-
-        <Container sx={{ my: 10 }}>
-          <Typography variant="h4" fontWeight={700} align="center" gutterBottom>
-            Join Aviaris's Horizon Waitlist
-          </Typography>
-          <Typography
-            variant="body1"
-            align="center"
-            color="text.secondary"
-            sx={{ mb: 3 }}
-          >
-            Be the first to try our scheduling platform.
-          </Typography>
-          <Box display="flex" justifyContent="center">
-            <Button
-              component={Link}
-              href="/contact"
-              variant="contained"
-              size="large"
-            >
-              Sign Up
-            </Button>
-          </Box>
-        </Container>
       </Container>
       <About />
       <Contact />
