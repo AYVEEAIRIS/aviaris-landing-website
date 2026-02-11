@@ -28,22 +28,6 @@ export default function HomePage() {
           experience.
         </Typography>
 
-        <Box sx={{ mt: 8 }}>
-          <Paper
-            elevation={3}
-            sx={{
-              height: 300,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Typography variant="body1" color="text.secondary">
-              Placeholder for Product Screenshot
-            </Typography>
-          </Paper>
-        </Box>
-
         <Box
           sx={{ mt: 12, py: 8, backgroundColor: theme.palette.secondary.main }}
         >
