@@ -36,27 +36,30 @@ export default function Contact() {
     setSuccess(false);
 
     try {
+      const form = new FormData();
+      form.append('name', formData.name);
+      form.append('email', formData.email);
+      form.append('message', formData.message);
+
       const response = await fetch('https://formspree.io/f/xjggklra', {
         method: 'POST',
+        body: form,
         headers: {
-          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setSuccess(true);
         setFormData({ name: '', email: '', message: '' });
-        // Redirect after 2 seconds
-        setTimeout(() => {
-          window.location.href = '/contact/thank-you';
-        }, 2000);
       } else {
+        const data = await response.json();
+        console.error('Formspree response data:', data);
         setError('Failed to send message. Please try again.');
       }
     } catch (err) {
-      setError('An error occurred. Please try again.');
       console.error(err);
+      setError('An error occurred. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -88,7 +91,7 @@ export default function Contact() {
             severity="success"
             sx={{ marginTop: '1rem', maxWidth: '50ch', margin: '1rem auto' }}
           >
-            Message sent successfully! Redirecting...
+            Message sent successfully! We'll be in touch soon.
           </Alert>
         )}
         {error && (
@@ -116,6 +119,7 @@ export default function Contact() {
             variant="outlined"
             value={formData.name}
             onChange={handleChange}
+            disabled={success}
             required
           />
           <TextField
@@ -125,6 +129,7 @@ export default function Contact() {
             variant="outlined"
             value={formData.email}
             onChange={handleChange}
+            disabled={success}
             required
           />
           <TextField
@@ -135,13 +140,14 @@ export default function Contact() {
             variant="outlined"
             value={formData.message}
             onChange={handleChange}
+            disabled={success}
             required
           />
           <Button
             type="submit"
             variant="contained"
             sx={{ marginTop: '1rem' }}
-            disabled={isLoading}
+            disabled={isLoading || success}
           >
             {isLoading ? 'Sending...' : 'Send Inquiry'}
           </Button>
