@@ -172,6 +172,7 @@ export default function HomePage() {
         </Paper>
 
         <Box
+          id="horizon"
           sx={{
             mt: 12,
             py: 10,
