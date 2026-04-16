@@ -10,7 +10,9 @@ import Contact from './components/Contact';
 export default function HomePage() {
   return (
     <main>
-      <Container sx={{ textAlign: 'center', paddingTop: '6rem', paddingBottom: '6rem' }}>
+      <Container
+        sx={{ textAlign: 'center', paddingTop: '6rem', paddingBottom: '6rem' }}
+      >
         <Box
           component="img"
           src="/Horizontal Lockups-Black.svg"

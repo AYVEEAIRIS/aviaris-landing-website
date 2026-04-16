@@ -5,15 +5,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Box,
-  CssBaseline,
-} from '@mui/material';
+import { AppBar, Toolbar, Button, Box, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '@/config/theme';
 import Footer from './components/layout/Footer';
@@ -25,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/Logomark-Black.svg" />
+      </head>
       <body
         style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}
       >
