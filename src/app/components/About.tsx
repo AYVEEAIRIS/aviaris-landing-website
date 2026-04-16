@@ -45,18 +45,27 @@ export default function About() {
           >
             About Aviaris
           </Typography>
-          <Typography variant="h3" fontWeight={700} sx={{ mt: 2, lineHeight: 1.25 }}>
+          <Typography
+            variant="h3"
+            fontWeight={700}
+            sx={{ mt: 2, lineHeight: 1.25 }}
+          >
             Our mission is to empower operational teams to turn strategy into
             action through a unified platform.
           </Typography>
           <Typography
             variant="body1"
-            sx={{ mt: 4, color: theme.palette.primary.light, maxWidth: '620px' }}
+            sx={{
+              mt: 4,
+              color: theme.palette.primary.light,
+              maxWidth: '620px',
+            }}
           >
-            We believe that to develop solutions for real world, critical business
-            problems that affect day-to-day operations, we must first solve
-            communication gaps and disparate data sources. We aim to improve the
-            lack of transparency and visibility to reduce human error.
+            We believe that to develop solutions for real world, critical
+            business problems that affect day-to-day operations, we must first
+            solve communication gaps and disparate data sources. We aim to
+            improve the lack of transparency and visibility to reduce human
+            error.
           </Typography>
         </Box>
 

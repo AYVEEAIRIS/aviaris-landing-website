@@ -5,6 +5,13 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 import { AppBar, Toolbar, Button, Box, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '@/config/theme';
@@ -16,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/Logomark-Black.svg" />
       </head>
