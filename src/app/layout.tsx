@@ -63,6 +63,16 @@ export default function RootLayout({
                 <Button
                   onClick={() =>
                     document
+                      .getElementById('horizon')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  sx={{ marginRight: 2, color: 'white' }}
+                >
+                  Products
+                </Button>
+                <Button
+                  onClick={() =>
+                    document
                       .getElementById('about')
                       ?.scrollIntoView({ behavior: 'smooth' })
                   }
