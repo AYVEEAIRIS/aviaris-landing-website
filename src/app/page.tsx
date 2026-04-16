@@ -11,12 +11,17 @@ export default function HomePage() {
   return (
     <main>
       <Container sx={{ textAlign: 'center', paddingTop: '4rem' }}>
-        <Typography variant="h2" fontWeight={700} gutterBottom>
-          Horizon
-        </Typography>
+        <Box
+          component="img"
+          src="/Horizontal Lockups-Black.svg"
+          alt="Aviaris Horizontal Logo"
+          sx={{ height: '80px', marginBottom: '4rem' }}
+        />
 
         <Typography variant="h5" color="text.secondary" gutterBottom>
-          Aviation-based Software for Supporting Operational Teams
+          Protect the Operation with unified data and clear, actionable insights
+          so every team operates with full context and shared visibility
+          ensuring decisions are clear, transparent, and aligned.
         </Typography>
 
         <Typography
