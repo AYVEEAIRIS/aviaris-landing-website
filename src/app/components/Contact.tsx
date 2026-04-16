@@ -1,12 +1,7 @@
 'use client';
 import { useState } from 'react';
-import {
-  Box,
-  Typography,
-  TextField,
-  Button,
-  Alert,
-} from '@mui/material';
+import { Box, Typography, TextField, Button, Alert } from '@mui/material';
+import { theme } from '@/config/theme';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -63,7 +58,7 @@ export default function Contact() {
     <section id="contact">
       <Box
         sx={{
-          backgroundColor: '#fafafa',
+          backgroundColor: theme.palette.primary.light + '30',
           py: 16,
           px: { xs: 4, md: 12 },
           display: 'flex',
@@ -71,10 +66,16 @@ export default function Contact() {
           alignItems: 'center',
         }}
       >
-        <Box sx={{ maxWidth: '480px', width: '100%', textAlign: 'center', mb: 6 }}>
+        <Box
+          sx={{ maxWidth: '480px', width: '100%', textAlign: 'center', mb: 6 }}
+        >
           <Typography
             variant="overline"
-            sx={{ color: '#999', fontWeight: 700, letterSpacing: 2 }}
+            sx={{
+              color: theme.palette.primary.main,
+              fontWeight: 700,
+              letterSpacing: 2,
+            }}
           >
             Get in Touch
           </Typography>
@@ -88,12 +89,18 @@ export default function Contact() {
         </Box>
 
         {success && (
-          <Alert severity="success" sx={{ mb: 3, width: '100%', maxWidth: '480px' }}>
+          <Alert
+            severity="success"
+            sx={{ mb: 3, width: '100%', maxWidth: '480px' }}
+          >
             Message sent successfully! We'll be in touch soon.
           </Alert>
         )}
         {error && (
-          <Alert severity="error" sx={{ mb: 3, width: '100%', maxWidth: '480px' }}>
+          <Alert
+            severity="error"
+            sx={{ mb: 3, width: '100%', maxWidth: '480px' }}
+          >
             {error}
           </Alert>
         )}

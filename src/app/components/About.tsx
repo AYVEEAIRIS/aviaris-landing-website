@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
+import { theme } from '@/config/theme';
 
 const values = [
   {
@@ -25,11 +26,22 @@ const values = [
 export default function About() {
   return (
     <section id="about">
-      <Box sx={{ backgroundColor: '#0f0f0f', color: '#fff', py: 16, px: { xs: 4, md: 12 } }}>
+      <Box
+        sx={{
+          backgroundColor: theme.palette.primary.main,
+          color: '#fff',
+          py: 16,
+          px: { xs: 4, md: 12 },
+        }}
+      >
         <Box sx={{ maxWidth: '800px', mb: 12 }}>
           <Typography
             variant="overline"
-            sx={{ color: '#666', fontWeight: 700, letterSpacing: 2 }}
+            sx={{
+              color: theme.palette.primary.light,
+              fontWeight: 700,
+              letterSpacing: 2,
+            }}
           >
             About Aviaris
           </Typography>
@@ -37,7 +49,10 @@ export default function About() {
             Our mission is to empower operational teams to turn strategy into
             action through a unified platform.
           </Typography>
-          <Typography variant="body1" sx={{ mt: 4, color: '#999', maxWidth: '620px' }}>
+          <Typography
+            variant="body1"
+            sx={{ mt: 4, color: theme.palette.primary.light, maxWidth: '620px' }}
+          >
             We believe that to develop solutions for real world, critical business
             problems that affect day-to-day operations, we must first solve
             communication gaps and disparate data sources. We aim to improve the
@@ -48,7 +63,11 @@ export default function About() {
         <Box>
           <Typography
             variant="overline"
-            sx={{ color: '#666', fontWeight: 700, letterSpacing: 2 }}
+            sx={{
+              color: theme.palette.primary.light,
+              fontWeight: 700,
+              letterSpacing: 2,
+            }}
           >
             Our Values
           </Typography>
@@ -59,14 +78,19 @@ export default function About() {
                   sx={{
                     py: 4,
                     pr: { sm: 8 },
-                    borderTop: '1px solid #222',
-                    ...(i < values.length - 2 && { borderBottom: '1px solid #222' }),
+                    borderTop: `1px solid ${theme.palette.primary.light}40`,
+                    ...(i < values.length - 2 && {
+                      borderBottom: `1px solid ${theme.palette.primary.light}40`,
+                    }),
                   }}
                 >
                   <Typography variant="h6" fontWeight={700} gutterBottom>
                     {value.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#999' }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: theme.palette.primary.light }}
+                  >
                     {value.body}
                   </Typography>
                 </Box>

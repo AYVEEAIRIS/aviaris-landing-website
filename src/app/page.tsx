@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { Container, Typography, Box, Button, Paper } from '@mui/material';
+import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import { theme } from '@/config/theme';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -26,13 +25,25 @@ export default function HomePage() {
           ensuring decisions are clear, transparent, and aligned.
         </Typography>
 
+        <Button
+          variant="contained"
+          size="large"
+          onClick={() =>
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+          }
+          sx={{ mt: 4 }}
+        >
+          Get in Touch
+        </Button>
+
+        {/* Problem statement */}
         <Box
           sx={{
             mt: 12,
             py: 8,
             px: 4,
-            borderLeft: `4px solid ${theme.palette.error.main}`,
-            backgroundColor: theme.palette.grey[100],
+            borderLeft: `4px solid ${theme.palette.primary.dark}`,
+            backgroundColor: theme.palette.primary.light + '40',
             textAlign: 'left',
             maxWidth: '720px',
             mx: 'auto',
@@ -42,7 +53,7 @@ export default function HomePage() {
           <Typography
             variant="overline"
             sx={{
-              color: theme.palette.error.main,
+              color: theme.palette.primary.dark,
               fontWeight: 700,
               letterSpacing: 2,
             }}
@@ -55,30 +66,24 @@ export default function HomePage() {
           <Typography variant="body1" color="text.secondary">
             Critical operational decisions are often made across siloed systems,
             spreadsheets, and isolated teams—without a complete view of the
-            Operation. When data is fragmented and communication is
-            inconsistent, risks go unseen until it&apos;s too late.
+            Operation. When data is fragmented and communication is inconsistent,
+            risks go unseen until it&apos;s too late.
           </Typography>
         </Box>
 
+        {/* Contributing factors */}
         <Box sx={{ mt: 10, maxWidth: '720px', mx: 'auto', textAlign: 'left' }}>
           <Typography
             variant="overline"
             sx={{
-              color: theme.palette.error.main,
+              color: theme.palette.primary.dark,
               fontWeight: 700,
               letterSpacing: 2,
             }}
           >
             3 Contributing Factors
           </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 3,
-              mt: 3,
-            }}
-          >
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mt: 3 }}>
             {[
               {
                 title: 'Fragmented data and workflows',
@@ -99,8 +104,8 @@ export default function HomePage() {
                 sx={{
                   p: 4,
                   borderRadius: 1,
-                  borderLeft: `4px solid ${theme.palette.error.main}`,
-                  backgroundColor: theme.palette.grey[50],
+                  borderLeft: `4px solid ${theme.palette.primary.dark}`,
+                  backgroundColor: theme.palette.primary.light + '30',
                   display: 'flex',
                   gap: 2,
                   alignItems: 'flex-start',
@@ -109,7 +114,7 @@ export default function HomePage() {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: theme.palette.error.main,
+                    color: theme.palette.primary.main,
                     fontWeight: 700,
                     minWidth: 24,
                     mt: '2px',
@@ -131,13 +136,14 @@ export default function HomePage() {
           <Typography
             variant="body1"
             fontWeight={500}
-            sx={{ mt: 4, color: theme.palette.error.main }}
+            sx={{ mt: 4, color: theme.palette.primary.dark }}
           >
             This leads to increased risk to the Operation, inefficient use of
             resources, and decisions made without the full story.
           </Typography>
         </Box>
 
+        {/* Introducing Aviaris */}
         <Paper
           elevation={0}
           sx={{
@@ -149,7 +155,7 @@ export default function HomePage() {
             mx: 'auto',
             borderRadius: 2,
             border: `1px solid ${theme.palette.primary.main}`,
-            backgroundColor: theme.palette.primary.main + '0D',
+            backgroundColor: theme.palette.primary.light + '40',
           }}
         >
           <Typography
@@ -173,13 +179,15 @@ export default function HomePage() {
           </Typography>
         </Paper>
 
+        {/* Horizon product section */}
         <Box
           id="horizon"
           sx={{
             mt: 16,
             py: 12,
             px: 4,
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: theme.palette.primary.light,
+            borderRadius: 2,
           }}
         >
           <Box
@@ -236,8 +244,14 @@ export default function HomePage() {
             ].map((feature) => (
               <Paper
                 key={feature.title}
-                elevation={2}
-                sx={{ p: 5, borderRadius: 2, width: 240 }}
+                elevation={0}
+                sx={{
+                  p: 5,
+                  borderRadius: 2,
+                  width: 240,
+                  backgroundColor: '#fff',
+                  border: `1px solid ${theme.palette.primary.light}`,
+                }}
               >
                 <Typography variant="h6" fontWeight={700} gutterBottom>
                   {feature.title}
