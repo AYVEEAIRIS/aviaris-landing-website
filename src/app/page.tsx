@@ -10,12 +10,12 @@ import Contact from './components/Contact';
 export default function HomePage() {
   return (
     <main>
-      <Container sx={{ textAlign: 'center', paddingTop: '4rem' }}>
+      <Container sx={{ textAlign: 'center', paddingTop: '6rem', paddingBottom: '6rem' }}>
         <Box
           component="img"
           src="/Horizontal Lockups-Black.svg"
           alt="Aviaris Horizontal Logo"
-          sx={{ height: '80px', marginBottom: '4rem' }}
+          sx={{ height: '80px', marginBottom: '5rem' }}
         />
 
         <Typography variant="h5" color="text.secondary" gutterBottom>
@@ -26,7 +26,7 @@ export default function HomePage() {
 
         <Box
           sx={{
-            mt: 8,
+            mt: 12,
             py: 8,
             px: 4,
             borderLeft: `4px solid ${theme.palette.error.main}`,
@@ -58,7 +58,7 @@ export default function HomePage() {
           </Typography>
         </Box>
 
-        <Box sx={{ mt: 6, maxWidth: '720px', mx: 'auto', textAlign: 'left' }}>
+        <Box sx={{ mt: 10, maxWidth: '720px', mx: 'auto', textAlign: 'left' }}>
           <Typography
             variant="overline"
             sx={{
@@ -73,8 +73,8 @@ export default function HomePage() {
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              gap: 2,
-              mt: 2,
+              gap: 3,
+              mt: 3,
             }}
           >
             {[
@@ -95,7 +95,7 @@ export default function HomePage() {
                 key={i}
                 elevation={0}
                 sx={{
-                  p: 3,
+                  p: 4,
                   borderRadius: 1,
                   borderLeft: `4px solid ${theme.palette.error.main}`,
                   backgroundColor: theme.palette.grey[50],
@@ -129,7 +129,7 @@ export default function HomePage() {
           <Typography
             variant="body1"
             fontWeight={500}
-            sx={{ mt: 3, color: theme.palette.error.main }}
+            sx={{ mt: 4, color: theme.palette.error.main }}
           >
             This leads to increased risk to the Operation, inefficient use of
             resources, and decisions made without the full story.
@@ -139,8 +139,8 @@ export default function HomePage() {
         <Paper
           elevation={0}
           sx={{
-            mt: 12,
-            py: 8,
+            mt: 16,
+            py: 10,
             px: 6,
             textAlign: 'center',
             maxWidth: '720px',
@@ -160,7 +160,7 @@ export default function HomePage() {
           >
             Introducing Aviaris
           </Typography>
-          <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 2 }}>
+          <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 3 }}>
             One environment. Full visibility. Every team.
           </Typography>
           <Typography variant="body1" color="text.secondary">
@@ -174,14 +174,14 @@ export default function HomePage() {
         <Box
           id="horizon"
           sx={{
-            mt: 12,
-            py: 10,
+            mt: 16,
+            py: 12,
             px: 4,
             backgroundColor: theme.palette.secondary.main,
           }}
         >
           <Box
-            sx={{ maxWidth: '720px', mx: 'auto', textAlign: 'center', mb: 6 }}
+            sx={{ maxWidth: '720px', mx: 'auto', textAlign: 'center', mb: 8 }}
           >
             <Typography
               variant="overline"
@@ -193,7 +193,7 @@ export default function HomePage() {
             >
               Introducing Horizon
             </Typography>
-            <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 2 }}>
+            <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 3 }}>
               A unified system for heavy maintenance planning and execution
             </Typography>
             <Typography variant="body1" color="text.secondary">
@@ -209,7 +209,7 @@ export default function HomePage() {
           <Box
             sx={{
               display: 'flex',
-              gap: 3,
+              gap: 4,
               justifyContent: 'center',
               flexWrap: 'wrap',
             }}
@@ -235,7 +235,7 @@ export default function HomePage() {
               <Paper
                 key={feature.title}
                 elevation={2}
-                sx={{ p: 4, borderRadius: 2, width: 240 }}
+                sx={{ p: 5, borderRadius: 2, width: 240 }}
               >
                 <Typography variant="h6" fontWeight={700} gutterBottom>
                   {feature.title}
