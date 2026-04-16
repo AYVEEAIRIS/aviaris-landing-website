@@ -172,48 +172,78 @@ export default function HomePage() {
         </Paper>
 
         <Box
-          sx={{ mt: 12, py: 8, backgroundColor: theme.palette.secondary.main }}
+          sx={{
+            mt: 12,
+            py: 10,
+            px: 4,
+            backgroundColor: theme.palette.secondary.main,
+          }}
         >
-          <Typography variant="h4" fontWeight={700} align="center" gutterBottom>
-            Key Features
-          </Typography>
+          <Box
+            sx={{ maxWidth: '720px', mx: 'auto', textAlign: 'center', mb: 6 }}
+          >
+            <Typography
+              variant="overline"
+              sx={{
+                color: theme.palette.primary.main,
+                fontWeight: 700,
+                letterSpacing: 2,
+              }}
+            >
+              Introducing Horizon
+            </Typography>
+            <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 2 }}>
+              A unified system for heavy maintenance planning and execution
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              Designed for the complexity of aircraft heavy maintenance, Horizon
+              brings planning, scheduling, and execution into a single, unified
+              environment. From check requirements and package builds to budget
+              alignment and schedule optimization, teams gain a complete view of
+              upcoming maintenance events—enabling smarter planning, earlier
+              risk identification, and more efficient use of resources.
+            </Typography>
+          </Box>
 
           <Box
             sx={{
               display: 'flex',
               gap: 3,
               justifyContent: 'center',
-              mt: 3,
               flexWrap: 'wrap',
             }}
           >
-            <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
-              <Typography variant="h6" fontWeight={700} gutterBottom>
-                Timeline Scheduling
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Visualize tasks on a horizontal timeline with stackable rows.
-              </Typography>
-            </Paper>
-
-            <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
-              <Typography variant="h6" fontWeight={700} gutterBottom>
-                Forecasting Model
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Create scheduling forecasts in the future with predictive
-                algorithms.
-              </Typography>
-            </Paper>
-
-            <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
-              <Typography variant="h6" fontWeight={700} gutterBottom>
-                Communication Hub
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Centralize team communication from top to bottom.
-              </Typography>
-            </Paper>
+            {[
+              {
+                title: 'End-to-End Planning',
+                body: 'Manage check requirements, package builds, and long-range maintenance plans in one place.',
+              },
+              {
+                title: 'Schedule & Yield Optimization',
+                body: 'Align maintenance schedules with operational priorities, green time, and aircraft utilization.',
+              },
+              {
+                title: 'Execution Visibility',
+                body: 'Track daily status, parts and tooling risks, and other check performance indicators in a centralized workspace.',
+              },
+              {
+                title: 'Performance & Cost Control',
+                body: 'Monitor MRO performance and maintenance spend against plan.',
+              },
+            ].map((feature) => (
+              <Paper
+                key={feature.title}
+                elevation={2}
+                sx={{ p: 4, borderRadius: 2, width: 240 }}
+              >
+                <Typography variant="h6" fontWeight={700} gutterBottom>
+                  {feature.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {feature.body}
+                </Typography>
+              </Paper>
+            ))}
           </Box>
         </Box>
       </Container>
