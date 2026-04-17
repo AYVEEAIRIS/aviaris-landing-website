@@ -1,13 +1,7 @@
 'use client';
 import { useState } from 'react';
-import {
-  Container,
-  Typography,
-  Box,
-  TextField,
-  Button,
-  Alert,
-} from '@mui/material';
+import { Box, Typography, TextField, Button, Alert } from '@mui/material';
+import { theme } from '@/config/theme';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,10 +17,7 @@ export default function Contact() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -44,9 +35,7 @@ export default function Contact() {
       const response = await fetch('https://formspree.io/f/xqedznpk', {
         method: 'POST',
         body: form,
-        headers: {
-          Accept: 'application/json',
-        },
+        headers: { Accept: 'application/json' },
       });
 
       if (response.ok) {
@@ -67,29 +56,42 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <Container
-        sx={{ textAlign: 'center', paddingTop: '2rem', paddingBottom: '1rem' }}
+      <Box
+        sx={{
+          backgroundColor: theme.palette.primary.light + '30',
+          py: 16,
+          px: { xs: 4, md: 12 },
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
       >
-        <Typography
-          variant="h3"
-          fontWeight={700}
-          sx={{ marginTop: '1rem' }}
-          gutterBottom
+        <Box
+          sx={{ maxWidth: '480px', width: '100%', textAlign: 'center', mb: 6 }}
         >
-          Contact Us
-        </Typography>
-        <Typography
-          variant="h6"
-          sx={{ marginTop: '0.5rem', maxWidth: '1000px', margin: '0 auto' }}
-        >
-          Have questions or want to learn more about Aviaris or our product,
-          Horizon? Fill out the form below and we'll get back to you as soon as
-          possible.
-        </Typography>
+          <Typography
+            variant="overline"
+            sx={{
+              color: theme.palette.primary.main,
+              fontWeight: 700,
+              letterSpacing: 2,
+            }}
+          >
+            Get in Touch
+          </Typography>
+          <Typography variant="h4" fontWeight={700} sx={{ mt: 1 }}>
+            Contact Us
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>
+            Have questions or want to learn more about Aviaris or Horizon? We'd
+            love to hear from you.
+          </Typography>
+        </Box>
+
         {success && (
           <Alert
             severity="success"
-            sx={{ marginTop: '1rem', maxWidth: '50ch', margin: '1rem auto' }}
+            sx={{ mb: 3, width: '100%', maxWidth: '480px' }}
           >
             Message sent successfully! We'll be in touch soon.
           </Alert>
@@ -97,26 +99,28 @@ export default function Contact() {
         {error && (
           <Alert
             severity="error"
-            sx={{ marginTop: '1rem', maxWidth: '50ch', margin: '1rem auto' }}
+            sx={{ mb: 3, width: '100%', maxWidth: '480px' }}
           >
             {error}
           </Alert>
         )}
+
         <Box
           component="form"
           onSubmit={handleSubmit}
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            marginTop: '2rem',
-            '& .MuiTextField-root': { m: 1, width: '50ch' },
+            gap: 2,
+            width: '100%',
+            maxWidth: '480px',
           }}
         >
           <TextField
             name="name"
             label="Name"
             variant="outlined"
+            fullWidth
             value={formData.name}
             onChange={handleChange}
             disabled={success}
@@ -127,6 +131,7 @@ export default function Contact() {
             type="email"
             label="Email"
             variant="outlined"
+            fullWidth
             value={formData.email}
             onChange={handleChange}
             disabled={success}
@@ -138,6 +143,7 @@ export default function Contact() {
             rows={4}
             multiline
             variant="outlined"
+            fullWidth
             value={formData.message}
             onChange={handleChange}
             disabled={success}
@@ -146,13 +152,14 @@ export default function Contact() {
           <Button
             type="submit"
             variant="contained"
-            sx={{ marginTop: '1rem' }}
+            size="large"
             disabled={isLoading || success}
+            sx={{ mt: 1 }}
           >
             {isLoading ? 'Sending...' : 'Send Inquiry'}
           </Button>
         </Box>
-      </Container>
+      </Box>
     </section>
   );
 }

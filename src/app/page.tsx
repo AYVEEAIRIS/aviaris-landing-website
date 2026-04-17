@@ -1,79 +1,196 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { Container, Typography, Box, Button, Paper } from '@mui/material';
+import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import { theme } from '@/config/theme';
 import About from './components/About';
 import Contact from './components/Contact';
+import Horizon from './components/Horizon';
 
 export default function HomePage() {
   return (
     <main>
-      <Container sx={{ textAlign: 'center', paddingTop: '4rem' }}>
-        <Typography variant="h2" fontWeight={700} gutterBottom>
-          Horizon
-        </Typography>
-
-        <Typography variant="h5" color="text.secondary" gutterBottom>
-          Aviation-based Software for Supporting Operational Teams
-        </Typography>
+      <Container
+        sx={{
+          textAlign: 'center',
+          paddingTop: { xs: '4rem', md: '6rem' },
+          paddingBottom: { xs: '3rem', md: '4rem' },
+          px: { xs: 3, sm: 4 },
+        }}
+      >
+        {/* Hero */}
+        <Box
+          component="img"
+          src="/Horizontal Lockups-Black.svg"
+          alt="Aviaris Horizontal Logo"
+          sx={{ height: { xs: '50px', md: '80px' }, marginBottom: { xs: '3rem', md: '5rem' } }}
+        />
 
         <Typography
-          variant="body1"
-          sx={{ maxWidth: '600px', margin: '0 auto', marginTop: '1rem' }}
+          variant="h5"
+          color="text.secondary"
+          gutterBottom
+          sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' }, maxWidth: '680px', mx: 'auto' }}
         >
-          Centralized scheduling and communication platform for Heavy
-          Maintenance built by individuals with 40+ years of aviation
-          experience.
+          Protect the Operation with unified data and clear, actionable insights
+          so every team operates with full context and shared visibility
+          ensuring decisions are clear, transparent, and aligned.
         </Typography>
 
-        <Box
-          sx={{ mt: 12, py: 8, backgroundColor: theme.palette.secondary.main }}
+        <Button
+          variant="contained"
+          size="large"
+          onClick={() =>
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+          }
+          sx={{ mt: 4 }}
         >
-          <Typography variant="h4" fontWeight={700} align="center" gutterBottom>
-            Key Features
-          </Typography>
+          Get in Touch
+        </Button>
 
-          <Box
-            sx={{
-              display: 'flex',
-              gap: 3,
-              justifyContent: 'center',
-              mt: 3,
-              flexWrap: 'wrap',
-            }}
+        {/* Problem statement */}
+        <Box
+          sx={{
+            mt: { xs: 8, md: 12 },
+            py: { xs: 5, md: 8 },
+            px: { xs: 3, md: 4 },
+            borderLeft: `4px solid ${theme.palette.primary.dark}`,
+            backgroundColor: theme.palette.primary.light + '40',
+            textAlign: 'left',
+            maxWidth: '720px',
+            mx: 'auto',
+            borderRadius: 1,
+          }}
+        >
+          <Typography
+            variant="overline"
+            sx={{ color: theme.palette.primary.dark, fontWeight: 700, letterSpacing: 2 }}
           >
-            <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
-              <Typography variant="h6" fontWeight={700} gutterBottom>
-                Timeline Scheduling
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Visualize tasks on a horizontal timeline with stackable rows.
-              </Typography>
-            </Paper>
-
-            <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
-              <Typography variant="h6" fontWeight={700} gutterBottom>
-                Forecasting Model
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Create scheduling forecasts in the future with predictive
-                algorithms.
-              </Typography>
-            </Paper>
-
-            <Paper elevation={2} sx={{ p: 4, borderRadius: 2, width: 260 }}>
-              <Typography variant="h6" fontWeight={700} gutterBottom>
-                Communication Hub
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Centralize team communication from top to bottom.
-              </Typography>
-            </Paper>
-          </Box>
+            The Problem
+          </Typography>
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            sx={{ mt: 1, mb: 2, fontSize: { xs: '1.4rem', md: '2.125rem' } }}
+          >
+            Business impact based on fragmented data and disconnected decisions
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            Critical operational decisions are often made across siloed systems,
+            spreadsheets, and isolated teams—without a complete view of the
+            Operation. When data is fragmented and communication is inconsistent,
+            risks go unseen until it&apos;s too late.
+          </Typography>
         </Box>
+
+        {/* Contributing factors */}
+        <Box
+          sx={{
+            mt: { xs: 6, md: 10 },
+            maxWidth: '720px',
+            mx: 'auto',
+            textAlign: 'left',
+          }}
+        >
+          <Typography
+            variant="overline"
+            sx={{ color: theme.palette.primary.dark, fontWeight: 700, letterSpacing: 2 }}
+          >
+            3 Contributing Factors
+          </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mt: 3 }}>
+            {[
+              {
+                title: 'Fragmented data and workflows',
+                body: 'Teams rely on disconnected systems, spreadsheets, and self-built datasets to manage their part of the Operation.',
+              },
+              {
+                title: 'Decisions without full visibility',
+                body: 'Without shared context, teams act in isolation—leading to misalignment, missed signals, and limited accountability.',
+              },
+              {
+                title: 'Hidden risks and delayed impact',
+                body: 'Manual processes and siloed data allow issues to go unnoticed until they surface as operational disruptions or budget overruns.',
+              },
+            ].map((factor, i) => (
+              <Paper
+                key={i}
+                elevation={0}
+                sx={{
+                  p: { xs: 3, md: 4 },
+                  borderRadius: 1,
+                  borderLeft: `4px solid ${theme.palette.primary.dark}`,
+                  backgroundColor: theme.palette.primary.light + '30',
+                  display: 'flex',
+                  gap: 2,
+                  alignItems: 'flex-start',
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{ color: theme.palette.primary.main, fontWeight: 700, minWidth: 24, mt: '2px' }}
+                >
+                  {i + 1}
+                </Typography>
+                <Box>
+                  <Typography variant="subtitle1" fontWeight={700} gutterBottom>
+                    {factor.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {factor.body}
+                  </Typography>
+                </Box>
+              </Paper>
+            ))}
+          </Box>
+          <Typography
+            variant="body1"
+            fontWeight={500}
+            sx={{ mt: 4, color: theme.palette.primary.dark }}
+          >
+            This leads to increased risk to the Operation, inefficient use of
+            resources, and decisions made without the full story.
+          </Typography>
+        </Box>
+
+        {/* Introducing Aviaris */}
+        <Paper
+          elevation={0}
+          sx={{
+            mt: { xs: 10, md: 16 },
+            py: { xs: 6, md: 10 },
+            px: { xs: 3, md: 6 },
+            textAlign: 'center',
+            maxWidth: '720px',
+            mx: 'auto',
+            borderRadius: 2,
+            border: `1px solid ${theme.palette.primary.main}`,
+            backgroundColor: theme.palette.primary.light + '40',
+          }}
+        >
+          <Typography
+            variant="overline"
+            sx={{ color: theme.palette.primary.main, fontWeight: 700, letterSpacing: 2 }}
+          >
+            Introducing Aviaris
+          </Typography>
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            sx={{ mt: 1, mb: 3, fontSize: { xs: '1.4rem', md: '2.125rem' } }}
+          >
+            One environment. Full visibility. Every team.
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            Unify data, workflows, and communication in a single, shared
+            environment—giving every team full visibility so issues are
+            identified early, coordination improves, and decisions are made
+            before problems escalate.
+          </Typography>
+        </Paper>
       </Container>
+
+      <Horizon />
       <About />
       <Contact />
     </main>

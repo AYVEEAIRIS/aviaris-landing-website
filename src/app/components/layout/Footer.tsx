@@ -1,8 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { Box, Typography, Stack, Divider, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { FC } from 'react';
 import { theme } from '@/config/theme';
 
@@ -12,33 +11,35 @@ const Footer: FC = () => {
       container
       spacing={2}
       sx={{
-        mt: 4,
-        py: 2,
-        px: 2,
-        bgcolor: theme.palette.secondary.main,
-        borderTop: `5px solid ${theme.palette.primary.main}`,
-        bottom: 0,
+        py: 3,
+        px: { xs: 3, md: 4 },
+        backgroundColor: theme.palette.primary.main,
+        borderTop: `3px solid ${theme.palette.primary.light}`,
         width: '100%',
       }}
     >
-      <Grid size={6}>
-        {/* Left Section - Brand */}
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Image
-          src="/Horizontal Lockups-Black.svg"
-          alt="Aviaris Horizontal Logo"
-          width={200}
-          height={30}
+          src="/Logomark-White.svg"
+          alt="Aviaris Logo"
+          width={36}
+          height={36}
         />
-        <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+        <Typography
+          variant="body2"
+          sx={{ mt: 1, color: theme.palette.primary.light }}
+        >
           Intelligent Scheduling • Collaborative Communication
         </Typography>
       </Grid>
-      <Grid size={6}>
-        {/* Right Section - Legal */}
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Typography
           variant="body2"
-          color="text.secondary"
-          sx={{ position: 'relative', textAlign: 'right', bottom: 0 }}
+          sx={{
+            color: theme.palette.primary.light,
+            textAlign: { xs: 'left', sm: 'right' },
+            mt: { xs: 2, sm: 0 },
+          }}
         >
           © {new Date().getFullYear()} Aviaris, Inc.
           <br />
