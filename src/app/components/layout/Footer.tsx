@@ -12,13 +12,13 @@ const Footer: FC = () => {
       spacing={2}
       sx={{
         py: 3,
-        px: 4,
+        px: { xs: 3, md: 4 },
         backgroundColor: theme.palette.primary.main,
         borderTop: `3px solid ${theme.palette.primary.light}`,
         width: '100%',
       }}
     >
-      <Grid size={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Image
           src="/Logomark-White.svg"
           alt="Aviaris Logo"
@@ -32,12 +32,13 @@ const Footer: FC = () => {
           Intelligent Scheduling • Collaborative Communication
         </Typography>
       </Grid>
-      <Grid size={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Typography
           variant="body2"
           sx={{
             color: theme.palette.primary.light,
-            textAlign: 'right',
+            textAlign: { xs: 'left', sm: 'right' },
+            mt: { xs: 2, sm: 0 },
           }}
         >
           © {new Date().getFullYear()} Aviaris, Inc.

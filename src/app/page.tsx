@@ -11,16 +11,27 @@ export default function HomePage() {
   return (
     <main>
       <Container
-        sx={{ textAlign: 'center', paddingTop: '6rem', paddingBottom: '6rem' }}
+        sx={{
+          textAlign: 'center',
+          paddingTop: { xs: '4rem', md: '6rem' },
+          paddingBottom: { xs: '3rem', md: '4rem' },
+          px: { xs: 3, sm: 4 },
+        }}
       >
+        {/* Hero */}
         <Box
           component="img"
           src="/Horizontal Lockups-Black.svg"
           alt="Aviaris Horizontal Logo"
-          sx={{ height: '80px', marginBottom: '5rem' }}
+          sx={{ height: { xs: '50px', md: '80px' }, marginBottom: { xs: '3rem', md: '5rem' } }}
         />
 
-        <Typography variant="h5" color="text.secondary" gutterBottom>
+        <Typography
+          variant="h5"
+          color="text.secondary"
+          gutterBottom
+          sx={{ fontSize: { xs: '1.1rem', md: '1.5rem' }, maxWidth: '680px', mx: 'auto' }}
+        >
           Protect the Operation with unified data and clear, actionable insights
           so every team operates with full context and shared visibility
           ensuring decisions are clear, transparent, and aligned.
@@ -30,9 +41,7 @@ export default function HomePage() {
           variant="contained"
           size="large"
           onClick={() =>
-            document
-              .getElementById('contact')
-              ?.scrollIntoView({ behavior: 'smooth' })
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
           }
           sx={{ mt: 4 }}
         >
@@ -42,9 +51,9 @@ export default function HomePage() {
         {/* Problem statement */}
         <Box
           sx={{
-            mt: 12,
-            py: 8,
-            px: 4,
+            mt: { xs: 8, md: 12 },
+            py: { xs: 5, md: 8 },
+            px: { xs: 3, md: 4 },
             borderLeft: `4px solid ${theme.palette.primary.dark}`,
             backgroundColor: theme.palette.primary.light + '40',
             textAlign: 'left',
@@ -55,34 +64,37 @@ export default function HomePage() {
         >
           <Typography
             variant="overline"
-            sx={{
-              color: theme.palette.primary.dark,
-              fontWeight: 700,
-              letterSpacing: 2,
-            }}
+            sx={{ color: theme.palette.primary.dark, fontWeight: 700, letterSpacing: 2 }}
           >
             The Problem
           </Typography>
-          <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 2 }}>
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            sx={{ mt: 1, mb: 2, fontSize: { xs: '1.4rem', md: '2.125rem' } }}
+          >
             Business impact based on fragmented data and disconnected decisions
           </Typography>
           <Typography variant="body1" color="text.secondary">
             Critical operational decisions are often made across siloed systems,
             spreadsheets, and isolated teams—without a complete view of the
-            Operation. When data is fragmented and communication is
-            inconsistent, risks go unseen until it&apos;s too late.
+            Operation. When data is fragmented and communication is inconsistent,
+            risks go unseen until it&apos;s too late.
           </Typography>
         </Box>
 
         {/* Contributing factors */}
-        <Box sx={{ mt: 10, maxWidth: '720px', mx: 'auto', textAlign: 'left' }}>
+        <Box
+          sx={{
+            mt: { xs: 6, md: 10 },
+            maxWidth: '720px',
+            mx: 'auto',
+            textAlign: 'left',
+          }}
+        >
           <Typography
             variant="overline"
-            sx={{
-              color: theme.palette.primary.dark,
-              fontWeight: 700,
-              letterSpacing: 2,
-            }}
+            sx={{ color: theme.palette.primary.dark, fontWeight: 700, letterSpacing: 2 }}
           >
             3 Contributing Factors
           </Typography>
@@ -105,7 +117,7 @@ export default function HomePage() {
                 key={i}
                 elevation={0}
                 sx={{
-                  p: 4,
+                  p: { xs: 3, md: 4 },
                   borderRadius: 1,
                   borderLeft: `4px solid ${theme.palette.primary.dark}`,
                   backgroundColor: theme.palette.primary.light + '30',
@@ -116,12 +128,7 @@ export default function HomePage() {
               >
                 <Typography
                   variant="body2"
-                  sx={{
-                    color: theme.palette.primary.main,
-                    fontWeight: 700,
-                    minWidth: 24,
-                    mt: '2px',
-                  }}
+                  sx={{ color: theme.palette.primary.main, fontWeight: 700, minWidth: 24, mt: '2px' }}
                 >
                   {i + 1}
                 </Typography>
@@ -150,9 +157,9 @@ export default function HomePage() {
         <Paper
           elevation={0}
           sx={{
-            mt: 16,
-            py: 10,
-            px: 6,
+            mt: { xs: 10, md: 16 },
+            py: { xs: 6, md: 10 },
+            px: { xs: 3, md: 6 },
             textAlign: 'center',
             maxWidth: '720px',
             mx: 'auto',
@@ -163,15 +170,15 @@ export default function HomePage() {
         >
           <Typography
             variant="overline"
-            sx={{
-              color: theme.palette.primary.main,
-              fontWeight: 700,
-              letterSpacing: 2,
-            }}
+            sx={{ color: theme.palette.primary.main, fontWeight: 700, letterSpacing: 2 }}
           >
             Introducing Aviaris
           </Typography>
-          <Typography variant="h4" fontWeight={700} sx={{ mt: 1, mb: 3 }}>
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            sx={{ mt: 1, mb: 3, fontSize: { xs: '1.4rem', md: '2.125rem' } }}
+          >
             One environment. Full visibility. Every team.
           </Typography>
           <Typography variant="body1" color="text.secondary">
@@ -181,10 +188,11 @@ export default function HomePage() {
             before problems escalate.
           </Typography>
         </Paper>
-        <Horizon />
-        <About />
-        <Contact />
       </Container>
+
+      <Horizon />
+      <About />
+      <Contact />
     </main>
   );
 }

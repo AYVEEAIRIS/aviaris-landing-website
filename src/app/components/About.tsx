@@ -48,7 +48,7 @@ export default function About() {
           <Typography
             variant="h3"
             fontWeight={700}
-            sx={{ mt: 2, lineHeight: 1.25 }}
+            sx={{ mt: 2, lineHeight: 1.25, fontSize: { xs: '1.75rem', md: '3rem' } }}
           >
             Our mission is to empower operational teams to turn strategy into
             action through a unified platform.
